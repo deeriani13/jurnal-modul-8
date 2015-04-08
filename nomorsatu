@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package nomorsatu;
+
+import java.util.Scanner;
+
+public class Nomorsatu {
+ int number;
+ 
+ private static int fibonaciii(int no){
+     int fb;
+     if(no==1 || no==2)
+         fb=1;
+     else
+         fb= fibonaciii(no-1)+ fibonaciii(no-2);
+     return fb;
+     
+ }
+    
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.println("==========================");
+        System.out.println("*****PROGRAM_FIBONACI*****");
+        System.out.println("==========================");
+        System.out.println("Masukkan huruf  :");
+        int number = s.nextInt();
+        for (int i=1; i<=number; i++)
+            System.out.println(fibonaciii(i)+ "");
+        System.out.println("");
+            
+    }
+
+  
+}
